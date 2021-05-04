@@ -1,0 +1,1337 @@
+{
+  "hash": "-913643995",
+  "bot": {
+    "id": "4d68df15-0eed-4308-b507-345f7eed8094",
+    "name": "Intro to JS Demo",
+    "chatBotType": "CUSTOMER_FACING_BOT",
+    "status": "NEW",
+    "getStartedButtonPayload": "hi",
+    "creationTime": 1619784329057,
+    "modificationTime": 1619784329057,
+    "demo": false,
+    "skipNLP": false,
+    "language": "en-US",
+    "botAttributes": {
+      "ENABLE_DEBUG": "true"
+    },
+    "sessionLength": 0,
+    "passThroughMode": false,
+    "transcriptDisabled": false,
+    "version": "2",
+    "publicBot": false,
+    "readOnly": false
+  },
+  "responder": [],
+  "requiredContext": [],
+  "conversationMessage": [
+    {
+      "id": "0790be9e74b9c87f78b9c3084ea8581c4a0ea347",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "objects_lists",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: OBJECT LIST OUTPUT ::\");\n\nvar myList = [\"apple\",\"pear\",\"orange\"];\n\nbotContext.printDebugMessage(\"myList is: \" + myList);\n\nbotContext.printDebugMessage(\"myList First Item is: \" + myList[0]);\nbotContext.printDebugMessage(\"myList Second Item is: \" + myList[1]);\nbotContext.printDebugMessage(\"myList Third Item is: \" + myList[2]);\nbotContext.printDebugMessage(\"myList Type is: \" + typeof myList);\nbotContext.printDebugMessage(\"myLast Length is: \" + myList.length);\n\nmyList.push(\"banana\");\nbotContext.printDebugMessage(\".push('banana') adds the item to the end of the list\");\nbotContext.printDebugMessage(\"myList is: \" + myList);\n\nmyList.pop();\nbotContext.printDebugMessage(\".pop() removes an item from the end of the list\");\nbotContext.printDebugMessage(\"myList is: \" + myList);\n\nmyList.shift();\nbotContext.printDebugMessage(\".shift() removes an item from the beginning of the list\");\nbotContext.printDebugMessage(\"myList is: \" + myList);\n\nmyList.unshift(\"apple\");\nbotContext.printDebugMessage(\".unshift('apple) adds the item to the beginning of the list\");\nbotContext.printDebugMessage(\"myList is: \" + myList);\n\nmyList[1] = \"kiwi\";\nbotContext.printDebugMessage(\"We can replace a specific list item using myList[1] = 'kiwi'\");\nbotContext.printDebugMessage(\"myList is: \" + myList);\n\n",
+      "group": "06270462-91a4-49a4-9b00-475a069bf081",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "38b7285ebc3bf4b30647c9158d4cedde6a74b6c7",
+      "prevMessageId": "169665091e7dfbde9dda128ae92406527c2872b5",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "1664367984f552f7dec4597ff2fbf240062438c1",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "text_question_30",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT_QUESTION",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Type an equation",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "processUserResponse": "var uMessage = botContext.getCurrentUserMessage();\n\nvar newMessage = uMessage.replace(/[^0-9\\(\\)\\+\\-\\*\\/\\.]/g, \"\");\n\nsendMessage(eval(newMessage));\n",
+      "group": "516e5f93-2e5e-4f32-b241-7d9d7000ab57",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "b073c6a445ff8dfcf56ba66b9cbf1cdab3c80463",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT_QUESTION",
+      "changeResponse": {
+        "enabled": true
+      },
+      "cancelResponse": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "169665091e7dfbde9dda128ae92406527c2872b5",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_11",
+      "pattern": [
+        "object"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "06270462-91a4-49a4-9b00-475a069bf081",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "0790be9e74b9c87f78b9c3084ea8581c4a0ea347",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "1e6a04de90dd3c97023ae2102daae642716dd5ef",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "functions_basic",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: FUNCTIONS BASIC OUTPUT ::\");\nvar sum = add(4,5);\nbotContext.printDebugMessage(\"Executing local add() Function with 4 add 5 : \" + sum);\nbotContext.printDebugMessage(\"Executing local subtract() Function with 10 minus 6 : \" + subtract(10,6));\n\n\nfunction add(x,y){\n  return x + y;\n}\nfunction subtract(x,y){\n  return x - y;\n}",
+      "group": "73ac1a01-c393-4f56-82aa-b48fb21ed4df",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "21be38c77fbf17001275268ddf7e71e25f2ed479",
+      "prevMessageId": "3d5e8cf326b96ac673e3db497dc19d1ab9a1c3bb",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "21be38c77fbf17001275268ddf7e71e25f2ed479",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "global_functions",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: FUNCTIONS GLOBAL OUTPUT ::\");\n\nvar multiplied = multiply(2,3);\nbotContext.printDebugMessage(\"Executing global multiply() Function with 2 time 3 : \" + multiplied);\nbotContext.printDebugMessage(\"Executing global divide() Function with 10 divided by 3 : \" + divide(10,3));",
+      "group": "73ac1a01-c393-4f56-82aa-b48fb21ed4df",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "b37f6edf6eaadad818a4372221db677c69c22102",
+      "prevMessageId": "1e6a04de90dd3c97023ae2102daae642716dd5ef",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "38b7285ebc3bf4b30647c9158d4cedde6a74b6c7",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "objects_",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: OBJECT OUTPUT :: \");\n\nvar person = {\n  firstName: \"John\",\n  lastName : \"Smith\",\n  age      : 36,\n  fullName : function() {\n    return this.firstName + \" \" + this.lastName;\n  }\n};\n\nbotContext.printDebugMessage(\"person.firstName is: \" + person.firstName);\nbotContext.printDebugMessage(\"person.lastName is: \" + person[\"lastName\"]); // Use dot notation preferably\nbotContext.printDebugMessage(\"person.age is: \" + person.age);\nbotContext.printDebugMessage(\"person.firstName is: \" + person.fullName());\nbotContext.printDebugMessage(\"Changing person.firstName to 'Paul'\");\nperson.firstName = \"Paul\";\nbotContext.printDebugMessage(\"person.firstName is: \" + person.fullName());",
+      "group": "06270462-91a4-49a4-9b00-475a069bf081",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "0790be9e74b9c87f78b9c3084ea8581c4a0ea347",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "3b345e42c1df90231f058c78e858baee176a81b7",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "context_variables_objects",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "\nvar myList = [\"apples\",\"orages\",\"pears\"];\n\nbotContext.printDebugMessage(\"Pre-Process myList is : \" + myList);\n\nbotContext.setBotVariable('myList', JSON.stringify(myList), true, false);",
+      "postProcessMessage": "var myList = JSON.parse(botContext.getBotVariable('myList'));\n\nbotContext.printDebugMessage(\"Post-Process myList is : \" + myList);",
+      "group": "61c959a0-8915-48ce-b2df-1cd8a21838ec",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "cb341871d83da9926cd59378bbf35cd35f70d38a",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "3b4875bb7eee0afb4834cbd145540f43d06c0a4d",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter",
+      "pattern": [
+        "hi"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ],
+            "sampleUserInput": "Hello!!"
+          }
+        }
+      },
+      "preProcessMessage": "var d = new Date(); \nif (botContext.getBotVariable('lastVisited') != null) { \n    botContext.setTriggerNextMessage('Welcome Back');\n} else { \n    botContext.setBotVariable('lastVisited',d,false,true); \n}",
+      "group": "017c907d-121b-4c08-83c0-2f6394b9e228",
+      "status": "ACTIVE",
+      "nextMessageId": "55fd0f3be8eec93184661acb6d1c4d4b61f5353f",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "3d5e8cf326b96ac673e3db497dc19d1ab9a1c3bb",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_15",
+      "pattern": [
+        "function"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "73ac1a01-c393-4f56-82aa-b48fb21ed4df",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "1e6a04de90dd3c97023ae2102daae642716dd5ef",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "4682264a53d3f75635dc0494356292e80b953ac8",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_8",
+      "pattern": [
+        "context"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "61c959a0-8915-48ce-b2df-1cd8a21838ec",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "cb341871d83da9926cd59378bbf35cd35f70d38a",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "47f3ede3331e9f2f04b1479716adfa9322f484ad",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "if_statements",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: IF STATEMENT OUTPUT ::\");\n\nvar lightIsOn = true;\n\nif(lightIsOn){\n  botContext.printDebugMessage(\":: The Light Is On ::\");\n}else{\n  botContext.printDebugMessage(\":: The Light Is Off ::\");\n}\n\n\nvar age = 20;\n  \nif(age >= 18){\n  botContext.printDebugMessage(\":: User Can Vote ::\");\n}else{\n  botContext.printDebugMessage(\":: User Cannot Vote ::\");\n}\n\nvar name = \"John\";\n\nif (name == \"John\"){\n  botContext.printDebugMessage(\":: User Name Is John ::\");\n}else{\n  botContext.printDebugMessage(\":: User Name Is Not John ::\");\n}",
+      "group": "42c9f958-5146-4b39-8115-55ffae21111f",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "cb6b15e5bc587d9dd96a8308cee43ebf24d8edcc",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "55fd0f3be8eec93184661acb6d1c4d4b61f5353f",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "hello_world_text",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "\nbotContext.sendMessage('Hello World!');\nbotContext.printDebugMessage('Hello World!');",
+      "group": "017c907d-121b-4c08-83c0-2f6394b9e228",
+      "status": "ACTIVE",
+      "prevMessageId": "3b4875bb7eee0afb4834cbd145540f43d06c0a4d",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "56baf5fd7f247ce1d693834141b6b75921b9882a",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "switch",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: IF STATEMENT OUTPUT ::\");\n\nvar fruitChoice = \"apple\";\n\nswitch(fruitChoice) {\n  case \"apple\":\n    botContext.printDebugMessage(\":: Your have chosen an Apple ::\");\n    break;\n  case \"pear\":\n    botContext.printDebugMessage(\":: Your have chosen a Pear ::\");\n    break;\n  default:\n    botContext.printDebugMessage(\":: This fruit is not Available ::\");\n}\n\n\nvar day = 3;\n\nswitch(day) {\n  case 1:\n    botContext.printDebugMessage(\":: Monday ::\");\n    break;\n  case 2:\n    botContext.printDebugMessage(\":: Tuesday ::\");\n    break;\n  case 3:\n    botContext.printDebugMessage(\":: Wednesday ::\");\n    break;\n  case 4:\n    botContext.printDebugMessage(\":: Thursday ::\");\n    break;\n  case 5:\n    botContext.printDebugMessage(\":: Friday ::\");\n    break;\n  case 6:\n    botContext.printDebugMessage(\":: Saturday ::\");\n    break;\n  case 7:\n    botContext.printDebugMessage(\":: Sunday ::\");\n    break;\n  default:\n    botContext.printDebugMessage(\":: This number does not map to a day of the week ::\");\n}",
+      "group": "14f3b9ee-9ccb-45a4-835b-bfaed803a987",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "b1a3d4c2a51c45be94f1bd73be8f3252bda2eb59",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "57c7aa8a681dfbd524b3012cd04b589a13d0e268",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "for_loop_list",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "\n\nvar numbers = [45, 4, 9, 16, 25];\n\nbotContext.printDebugMessage(\":: Using numbers.length ::\");\nvar i;\nfor (i = 0; i < numbers.length; i++) {\n  botContext.printDebugMessage(\":: Item : \" + i + \" in numbers is : \" + numbers[i] );\n}\n\nbotContext.printDebugMessage(\":: Using x in numbers ::\");\nvar x;\nfor (x in numbers){\n   botContext.printDebugMessage(\":: Item : \" + x + \" in numbers is : \" + numbers[x] );\n}",
+      "group": "b104ada1-6a4a-4da3-b4c8-93cc20251596",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "76da945b1168317ed138ffba0cc87581fd754aa6",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "5d7e08133fdec8fe4293053fa6cc7d9b752e2bc1",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "while_loop",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: WHILE LOOP OUTPUT ::\");\nvar i = 0;\nwhile (i < 10) {\n  botContext.printDebugMessage(\":: Variable (i) is : \" + i);\n  i++;\n}",
+      "group": "18931ce3-3da7-4a7f-b45a-b963acc9164c",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "ffd5f33b41c71538177062090a374fb690266132",
+      "prevMessageId": "a68235491f023f17cc31e5085e320e747e3e110d",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "6ad161f513e562fb9ac2a225ec6d44eac6caa57b",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "converting_variable_types_to_bool",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written Up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "var myVariable = 'true';\nbotContext.printDebugMessage(\"myVariable Data Type is : \" + typeof myVariable);\nbotContext.printDebugMessage(\"Converting myVariable to Boolean :\");\nmyVariable = JSON.parse(myVariable);\nbotContext.printDebugMessage(\"myVariable Data Type is : \" + typeof myVariable);",
+      "group": "e57bc1ba-585d-4041-b54e-b3b7aff90679",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "d6857a4a2a98a7765c9fb9c1d181cf0c4f6f3a55",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "76da945b1168317ed138ffba0cc87581fd754aa6",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "for_loops",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "\nvar i;\nfor (i = 0; i < 10; i++) {\n  botContext.printDebugMessage(\":: Variable (i) is : \" + i);\n}",
+      "group": "b104ada1-6a4a-4da3-b4c8-93cc20251596",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "57c7aa8a681dfbd524b3012cd04b589a13d0e268",
+      "prevMessageId": "f6969b58741dd6c52dd06d5ea1202cb6c7c90c15",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "9a26f6facb18d16f78aaabb6cd130d4b6dcbed4f",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "type_of_text",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "\nvar age = 36;\nvar distance = 93.25;\nvar color = \"Green\";\nvar lightIsOn = true;\n\nbotContext.printDebugMessage(':: Type Of - Output ::');\nbotContext.printDebugMessage('age Variable type is:: ' + typeof age);\nbotContext.printDebugMessage('distance Variable type is:: ' + typeof distance);\nbotContext.printDebugMessage('color Variable type is:: ' + typeof color);\nbotContext.printDebugMessage('lightIsOn Variable type is:: ' + typeof lightIsOn);",
+      "group": "a215da2a-5f87-40b0-b941-39778d5c02b0",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "ede3a0bd1fef280e471c21a3e7b46f9ea4f328fc",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "a68235491f023f17cc31e5085e320e747e3e110d",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_24",
+      "pattern": [
+        "while"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "18931ce3-3da7-4a7f-b45a-b963acc9164c",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "5d7e08133fdec8fe4293053fa6cc7d9b752e2bc1",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "b073c6a445ff8dfcf56ba66b9cbf1cdab3c80463",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_29",
+      "pattern": [
+        "test"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "516e5f93-2e5e-4f32-b241-7d9d7000ab57",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "1664367984f552f7dec4597ff2fbf240062438c1",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "b1837843fff175e7800982f84879cbbe5660bc80",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "fallback_starter",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Sorry, I am not able to understand.",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "82b210d1-102d-47f5-96f6-512846f41377",
+      "status": "ACTIVE",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "b1a3d4c2a51c45be94f1bd73be8f3252bda2eb59",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_19",
+      "pattern": [
+        "switch"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "14f3b9ee-9ccb-45a4-835b-bfaed803a987",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "56baf5fd7f247ce1d693834141b6b75921b9882a",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "b37f6edf6eaadad818a4372221db677c69c22102",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "useful_global_functions",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: USEFUL GLOBAL FUNCTIONS OUTPUT ::\");\n\nlog(\"The global log() Function makes it quick and easy to write a debug message.\");\n\nvar myVariable = \"John Smith\";\n    \nsetVar(\"myVariable\", myVariable);\n\nlog(\"The global setVar() Function makes it quick and easy to set a variable in the bot context.\");",
+      "postProcessMessage": "var myVariable = getVar(\"myVariable\");\n\nlog(\"The global getVar() Function makes it quick and easy to get a variable from the bot context\");\n\nsendMessage(\"The global sendMessage() Function makes it quick and easy to send a bot message\");",
+      "group": "73ac1a01-c393-4f56-82aa-b48fb21ed4df",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "21be38c77fbf17001275268ddf7e71e25f2ed479",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "cb341871d83da9926cd59378bbf35cd35f70d38a",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "context_variables_basic",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "var myVariable = \"Paul\";\n\nbotContext.printDebugMessage(\"Pre-Process myVariable is : \" + myVariable);\n\nbotContext.setBotVariable('myVariable', myVariable, true, false);\n",
+      "postProcessMessage": "var myVariable = botContext.getBotVariable('myVariable');\n\nbotContext.printDebugMessage(\"Post-Process myVariable is : \" + myVariable);",
+      "group": "61c959a0-8915-48ce-b2df-1cd8a21838ec",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "3b345e42c1df90231f058c78e858baee176a81b7",
+      "prevMessageId": "4682264a53d3f75635dc0494356292e80b953ac8",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "cb6b15e5bc587d9dd96a8308cee43ebf24d8edcc",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_17",
+      "pattern": [
+        "if"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "42c9f958-5146-4b39-8115-55ffae21111f",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "47f3ede3331e9f2f04b1479716adfa9322f484ad",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "d6857a4a2a98a7765c9fb9c1d181cf0c4f6f3a55",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "converting_variable_types_to_numbers",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "\nvar myVariable = '1';\nbotContext.printDebugMessage(\"myVariable Data Type is : \" + typeof myVariable);\nbotContext.printDebugMessage(\"Converting myVariable to Number :\");\nmyVariable = Number(myVariable);\nbotContext.printDebugMessage(\"myVariable Data Type is : \" + typeof myVariable);\nvar calculation = myVariable + 1;\nbotContext.printDebugMessage(\"Calculation Variable is : \" + calculation);\n\n",
+      "group": "e57bc1ba-585d-4041-b54e-b3b7aff90679",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "6ad161f513e562fb9ac2a225ec6d44eac6caa57b",
+      "prevMessageId": "e7b751c95925072a0d180e8be657a05a267e76a1",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    },
+    {
+      "id": "e7b751c95925072a0d180e8be657a05a267e76a1",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_6",
+      "pattern": [
+        "convert"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "e57bc1ba-585d-4041-b54e-b3b7aff90679",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "d6857a4a2a98a7765c9fb9c1d181cf0c4f6f3a55",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "ede3a0bd1fef280e471c21a3e7b46f9ea4f328fc",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_4",
+      "pattern": [
+        "type"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "a215da2a-5f87-40b0-b941-39778d5c02b0",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "9a26f6facb18d16f78aaabb6cd130d4b6dcbed4f",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "f6969b58741dd6c52dd06d5ea1202cb6c7c90c15",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "dialog_starter_21",
+      "pattern": [
+        "for"
+      ],
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "DIALOG_STARTER",
+          "tile": {
+            "tileData": [
+              {
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "group": "b104ada1-6a4a-4da3-b4c8-93cc20251596",
+      "status": "ACTIVE",
+      "required": true,
+      "nextMessageId": "76da945b1168317ed138ffba0cc87581fd754aa6",
+      "responseMatches": [
+        {
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "DIALOG_STARTER"
+    },
+    {
+      "id": "ffd5f33b41c71538177062090a374fb690266132",
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "name": "do_while_loop",
+      "type": "BOT_MESSAGE",
+      "content": {
+        "contentType": "STATIC",
+        "results": {
+          "type": "TEXT",
+          "tile": {
+            "tileData": [
+              {
+                "text": "Not Yet Written up",
+                "buttons": [],
+                "quickReplyList": []
+              }
+            ]
+          }
+        }
+      },
+      "preProcessMessage": "botContext.printDebugMessage(\":: DO WHILE LOOP OUTPUT ::\");\n\nvar i = 0;\ndo {\n  botContext.printDebugMessage(\":: Variable (i) is : \" + i);\n  i++;\n}\nwhile (i < 10);",
+      "group": "18931ce3-3da7-4a7f-b45a-b963acc9164c",
+      "status": "ACTIVE",
+      "required": true,
+      "prevMessageId": "5d7e08133fdec8fe4293053fa6cc7d9b752e2bc1",
+      "responseMatches": [
+        {
+          "name": "RULE_1",
+          "conditions": [],
+          "contextConditions": [],
+          "action": {
+            "name": "INTERACTION",
+            "value": "next"
+          },
+          "contextDataVariables": []
+        }
+      ],
+      "interactionType": "TEXT"
+    }
+  ],
+  "menus": [],
+  "groups": [
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "017c907d-121b-4c08-83c0-2f6394b9e228",
+      "name": "1.1 Hello World",
+      "creationTime": "2021-04-30 08:05:29",
+      "modificationTime": "2021-04-30 09:17:54",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "06270462-91a4-49a4-9b00-475a069bf081",
+      "name": "1.3 Objects",
+      "creationTime": "2021-05-02 05:04:21",
+      "modificationTime": "2021-05-02 05:05:21",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "14f3b9ee-9ccb-45a4-835b-bfaed803a987",
+      "name": "2.2 Switch Statements",
+      "creationTime": "2021-05-02 06:51:18",
+      "modificationTime": "2021-05-02 06:51:18",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "18931ce3-3da7-4a7f-b45a-b963acc9164c",
+      "name": "2.4 While Loops",
+      "creationTime": "2021-05-02 07:18:02",
+      "modificationTime": "2021-05-02 07:18:02",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "42c9f958-5146-4b39-8115-55ffae21111f",
+      "name": "2.1 If Statements",
+      "creationTime": "2021-05-02 06:40:34",
+      "modificationTime": "2021-05-02 06:40:34",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "516e5f93-2e5e-4f32-b241-7d9d7000ab57",
+      "name": "test",
+      "creationTime": "2021-05-02 08:11:31",
+      "modificationTime": "2021-05-02 08:11:31",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "61c959a0-8915-48ce-b2df-1cd8a21838ec",
+      "name": "1.5 Bot Context Variables",
+      "creationTime": "2021-04-30 11:47:34",
+      "modificationTime": "2021-05-02 05:04:31",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "73ac1a01-c393-4f56-82aa-b48fb21ed4df",
+      "name": "3.0 Functions",
+      "creationTime": "2021-05-02 06:36:42",
+      "modificationTime": "2021-05-02 06:40:05",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "82b210d1-102d-47f5-96f6-512846f41377",
+      "name": "9 Fallback",
+      "creationTime": "2021-04-30 08:05:29",
+      "modificationTime": "2021-04-30 09:17:22",
+      "dialogType": "FALLBACK_DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "a215da2a-5f87-40b0-b941-39778d5c02b0",
+      "name": "1.2 Variable Types",
+      "creationTime": "2021-04-30 09:16:47",
+      "modificationTime": "2021-04-30 09:17:35",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "b104ada1-6a4a-4da3-b4c8-93cc20251596",
+      "name": "2.3 For Loops",
+      "creationTime": "2021-05-02 07:04:10",
+      "modificationTime": "2021-05-02 07:04:10",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    },
+    {
+      "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "id": "e57bc1ba-585d-4041-b54e-b3b7aff90679",
+      "name": "1.4 Converting Variable Types",
+      "creationTime": "2021-04-30 11:21:34",
+      "modificationTime": "2021-05-02 05:05:31",
+      "dialogType": "DIALOG",
+      "status": "ENABLED",
+      "disambiguteOnlySelectedDomains": false
+    }
+  ],
+  "globalFunctions": {
+    "chatBotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+    "methods": "function __initConversation() { \n  //Any code you put here will be triggered on the conversation start. \n}\n\n\n\nfunction multiply(x,y){\n  return x * y;\n}\nfunction divide(x,y){\n  return x / y;\n}\n\n\n/** USEFUL GLOBAL FUNCTIONS **/\nfunction log(line) {\n  botContext.printDebugMessage(line);\n}\n\nfunction setVar(variableName, variableValue){\n  botContext.setBotVariable(variableName, variableValue, true, false);\n}\n\nfunction getVar(variableName){\n  var getVar = botContext.getBotVariable(variableName);\n  return getVar;\n}\n\nfunction sendMessage(msgText) {\n  botContext.sendMessage(msgText);\n}",
+    "creationTime": "2021-05-02 07:41:47",
+    "modificationTime": "2021-05-02 08:25:33"
+  },
+  "platforms": [
+    {
+      "id": "55ae12adf526da351d9711de07fcfe3b9bb1f99d",
+      "chatbotId": "4d68df15-0eed-4308-b507-345f7eed8094",
+      "integrationType": "HTMLCLIENT",
+      "platform": "HTMLCLIENT",
+      "status": "NEW"
+    }
+  ],
+  "associatedDomains": [],
+  "dialogTemplates": []
+}
